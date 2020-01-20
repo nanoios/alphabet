@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style >
+		@import url('https://fonts.googleapis.com/css?family=Unica+One|Vollkorn');
+
+$ff-ss: 'Unica One';
+$ff-s: 'Vollkorn';
+
+$clr-red: #c31;
+$clr-black: rgba(black, 1);
+$clr-gray: rgba(black, .7);
+
+*, *::before, *::after { box-sizing: border-box }
+
+body {
+  font-size: 1rem;
+  text-align: center;
+  font-family: $ff-s;
+  line-height: 1.4;
+  color: gray;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $ff-ss;
+  text-transform: uppercase;
+  line-height: .9;
+  color: #c31;
+}
+.container {
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+.card {
+	position: relative;
+	margin: 1em;
+	background-color: gray;
+}
+	.card::before,
+	.card::after {
+		content:"";
+		position: absolute;
+		top: 1.25em;
+		bottom: 1.25em;
+		left: 1.25em;
+		right: 1.25em;
+		opacity: 1;
+		transition: transform ease-out 200ms;
+	}
+	.card::before{
+		border-top: 1px solid white;
+		border-bottom: 1px solid white;
+		transform: scale(0,1);
+	}
+	.card::after{
+		border-left: 1px solid white;
+		border-right: 1px solid white;
+		transform: scale(1,0);
+	}
+	.card:hover::before {
+		transform: scale(1.05,1);
+	}
+	.card:hover::after {
+		transform: scale(1,1.05);
+	}
+
+.card_img {
+	max-width: 100%;
+	display: block;
+	transition: opacity ease-out 200ms;
+}
+.card_text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: red;
+	opacity: 0;
+	transition: opacity ease-out 200ms;
+}
+.card:hover .card_text {
+	opacity: 1;
+}
+.card:hover 
+  .card_img {
+    opacity: .6;
+}
+	</style>
+</head>
+<body>
+<h1 class="intro">Here is a generic heading</h1>
+<div class="container">
+	<div class="card">
+		<img src="train.jpg" alt="" class="card_img">
+		<div class="card_text">
+			<h3>Card title</h3>
+			<p>And here is some text</p>
+		</div>
+	</div>
+	<div class="card">
+		<img src="city.jpg" alt="" class="card_img">
+		<div class="card_text">
+			<h3>Card title</h3>
+			<p>And here is some text</p>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

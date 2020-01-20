@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title> <meta charset="UTF-8">
+	<style type="text/css">
+      body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Playfair Display', serif; 
+  line-height: 1;
+  color: #696150;
+}
+.wrap {max-width:660px;}
+
+p {
+  width: 125px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 4px;
+  transition-duration: 3s;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 20px;
+  color: inherit;
+}
+
+p:nth-of-type(1) {
+background: #F06E58;
+transition-timing-function: linear;}
+p:nth-of-type(2) {
+background: #FEA45D;
+transition-duration: 3s;}
+#go:target p{transform:translateX(300px)}
+	</style>
+</head>
+<body>
+ <div class="wrap">
+   <a href="#go"><span class=""></span>Запустить</a>
+
+  <div id="go">
+    <kbd>transition-timing-function</kbd>
+    <p>linear</p>
+    <p>ease</p>
+    
+</div>
+</div>
+</body>
+</html>

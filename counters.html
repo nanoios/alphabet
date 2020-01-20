@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head> <meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Unica+One|Vollkorn');
+
+		body {
+			text-align: center;
+			
+			font-size: 2rem;
+			}
+		a {
+			text-decoration: none;
+		}
+	    p.ttp::before{
+	    	position: relative;	    	
+	    }
+		p.ttp::after{
+	    	position: relative;
+	    }
+		p.ttp::before{
+			content:"";
+			background-image: url(airbus.jpg);
+		    width: 65px;
+            height: 40px;
+            display: inline-flex;
+            left: -.5em;
+            background-size: contain;
+            }
+		p.ttp::after{
+			content: "css on my work";
+			background-color: blue;
+			color: yellow;
+			display: inline-block;
+		
+			right: -.5em;			}
+		a[my-evidence]{
+			position: relative;
+		}
+		a[my-evidence]::before {
+			content: attr(my-evidence);
+			display: block;
+			position: absolute;
+			background-color: silver;
+			color: red;
+			border-radius: 20px;
+			padding: .3em .7em;
+			font-size: 16px;
+			bottom: -50px;
+			left:5%;
+			transform: scale(0);
+			transition: transform ease-out 300ms,
+					    bottom ease-out 300ms;
+		}
+		a[my-evidence]:hover::before{
+            transform: scale(1);
+            bottom: 90%;
+    	}
+    	p.ttppp {
+    		position: relative;
+    	}
+    	p.ttppp::before{
+    		content: open-quote;
+    		color: red;
+    	
+    	}
+        p.ttppp::after{
+    		content: close-quote;
+    		color: red;
+    	}
+    	.decorations{
+    		
+    		padding: .5em;
+    		
+
+    	}
+    	.section-with-deco::before {
+    		font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            content: '\f0e7';
+            display: block;
+            margin-bottom: 5px;   		
+    	}
+    	.counters{
+    		background-color: silver;
+    		text-align: left;
+    		padding: 2em 3em;
+    		margin-top: 3em;
+    		counter-reset: tututu;
+    	}
+    	.section {position: relative;}
+    	.section::before{
+    		counter-increment: tututu;
+    		content: counter(tututu);
+    		left: -1.6em;
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 3px solid red;
+            box-sizing: border-box;
+
+    	}
+
+    	.counters ol {
+  list-style: none;
+}
+
+.counters li::before {
+  counter-increment: ordered-list;
+  content: 'list item ' counter(ordered-list) ') ';
+  font-size: .8em;
+  color: $clr-red;
+}
+
+   .mount {
+   	counter-reset: masyv1;
+   	text-align: left;
+   	padding: 150px;
+   	margin: -1em;
+   	}
+   .mount h3{counter-reset: masyv2;background-color: silver;}
+   .mount h3:before {   	
+   	counter-increment: masyv1;
+   	content: "Материк "counter(masyv1) ". ";
+   }
+   .mount h4{counter-reset: masyv3;background-color: fuchsia;}
+   .mount h4:before {   	
+   	counter-increment: masyv2;
+   	content: counter(masyv1) ". Масив "counter(masyv2)". ";
+   }
+   .mount h5:before {
+   	counter-increment: masyv3;
+   	content: counter(masyv1) ". "counter(masyv2) ". Гора "counter(masyv3) " - ";
+   }
+   .intro{
+   	position: relative;
+   	display: inline-block;
+   	color: green;
+    }
+   	.intro::before{
+   		content:"";
+   		height:100%;
+   		position: absolute;
+   		display: block;
+   		background-color: white;
+   		
+   		z-index: -1;
+   		left: -20px;
+   		right: -20px;
+   	}
+   	.intro::after{
+   		content:"";
+   		height:100%;
+   		position: absolute;
+   		display: block;
+   		background-color: green;
+   		width: 100vw;
+   		left: 50%;
+   		transform: translateX(-51%);
+   		top: 0;
+   		z-index: -2;
+   	}
+  
+	</style>
+</head>
+<body>
+<div>	
+<p class="ttp" >Чумацький шлях - наша галактика.</p>
+<p class="ttppp">Задайте відповідний запит у 
+<a href="http://www.google.com.ua" my-evidence="Пошукова система">google.com.ua</a></p>
+</div>
+<div class="decorations">
+  <h1>We can decorate sections!</h1>
+  <h2 class="section-with-deco">Section title here</h2>
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+  <h2 class="section-with-deco">Section title here</h2>
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+  <h2 class="section-with-deco">Section title here</h2>
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+  <h2 class="section-with-deco">Section title here</h2>
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+  <h2 class="section-with-deco">Add add content after links</h2>
+  <p>Pellentesque <a href="example.pdf">habitant</a> morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. <a href="https://#" target="_blank">Mauris placerat</a> eleifend leo.</p>
+</div>
+
+
+<div class="counters">
+  <h1>We can number sections!</h1>
+  <h2 class="section">Section title here</h2>
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+  <h2 class="section">Section title here</h2>
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+  <h2 class="section">Section title here</h2>
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+  <h2 class="section">Section title here</h2>
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+  <h2 class="section">Section title here</h2>
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+  <ol>
+    <li>I'm a list item</li>
+    <li>me too!</li>
+    <li>me three</li>
+    <li>Hello there</li>
+  </ol>
+  <ol>
+    <li>I'm a list item</li>
+    <li>me too!</li>
+    <li>me three</li>
+    <li>Hello there</li>
+  </ol>
+</div>
+<h1 class="intro">Подільська височина</h1>
+<div class="mount">
+<h3>Євразія</h3>
+  <h4>Альпи</h4>
+    <h5>Монблан</h5>
+    <h5>Дюфур</h5>
+    <h5>Дом</h5>
+  <h4>Карпати</h4>
+    <h5>Молдовану</h5>
+    <h5>Риси</h5>
+    <h5>Говерла</h5>
+  <h4>Андалузькі гори</h4>
+  <h4>Піренеї</h4>
+  <h4>Гімалаї</h4>
+  <h4>Тяньшань</h4>
+  <h4>Кавказ</h4>
+  <h4>Алтай</h4>
+  <h4>Таврські гори</h4>
+  <h4>Тибет</h4>
+  <h4>Дінарські Альпи</h4>
+  <h4>Апеніни</h4>
+  <h4>Ардени</h4>
+  <h4>Гіссаро-Алай</h4>
+  <h4>Скандинавські гори</h4>
+  <h4>Урал</h4>
+  <h4>Ельбрус</h4>
+  <h4>Загрос</h4>
+  <h4>Іран</h4>
+  <h4>Армориканська височина</h4>
+<h3>Північна Америка</h3>
+  <h4>Каскадні гори</h4>
+  <h4>Береговий хребет</h4>
+  <h4>Аляскинський хребет</h4>
+  <h4>Скелясті гори</h4>
+  <h4>Аппалачі</h4>
+<h3>Південна Америка</h3>
+  <h4>Кордильєра-Орієнталь</h4>
+  <h4>Кордильєра-Сентраль</h4>
+  <h4>Кордильєра-Реаль</h4>
+  <h4>Кордильєра-Оксиденталь</h4>
+<h3>Африка</h3>
+  <h4>Атлас</h4>
+  <h4>Ер-Риф</h4>
+  <h4>Драконові гори</h4>
+</div>
+
+</body>
+</html>

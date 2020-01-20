@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>we will rock you</title>
+<meta charset="utf-8">
+<style>
+  fieldset:hover {
+    color:blue;
+    margin:15px;
+    transform: scale(1.02);
+    padding: 15px;
+      animation-name: yell;
+      animation-duration: 1000ms;
+      animation-fill-mode:forwards;
+  }
+    @keyframes yell {
+        100%{ background-color:yellow;
+        
+        }}
+  label:hover {
+    color: yellow;
+    border: 1px solid orange;
+    background-color: red;
+  }
+  .features fieldset{
+    display: inline-block;
+    transition: all 0.3s ease;
+  } 
+  input[type="radio"]{
+    border: 2px solid black;
+  }  
+  .border h2{
+    border: 3px solid black;
+    padding:5px;
+    background-color: #45cdef;
+  }
+  .border1 h2{
+    border: 3px solid black;
+    padding:5px;
+    background-color: #cfee24;
+  }
+  .border2 h2{
+    border: 3px solid black;
+    padding:5px;
+    background-color: orange;
+  }
+  .article >p{
+    color: red;
+    text-transform: capitalize;
+    margin: 10px;
+    padding: 10px;
+    height: 50px;
+    background-color: #ccc;
+  }
+  h2+p {
+    color:navy;
+  }
+  section label{
+    color: red;
+  }
+div p {
+  color:green;
+}
+p span {
+  color: red;
+}
+p .first a {
+  color: green;
+}
+img[alt$=tall] { 
+  border: 2px solid blue;
+}
+input[type="text"] {
+  background-color: pink;
+}
+input[type="text"]:focus {
+  background-color: ivory;
+}
+input:checked {
+width: 20px; 
+height: 20px;
+}
+li .redLink{ /* селектор потомка з пробілом стос-ся 
+                лише елементів з класом redlink які є вкладеними до поточного елементу li*/
+                color: red;
+            }
+
+h1.bb { 
+font-family: 'Niconne', cursive; 
+font-size: 50px; 
+color: #e12527; 
+}
+h1.bb:before, h1.bb:after { 
+content: "\2746"; 
+display: inline-block; 
+font-size: 50px; 
+color: #38afaa; 
+-webkit-animation: my 4s infinite alternate; 
+animation: my 4s infinite alternate; 
+}
+h1.bb:before { 
+margin-right: 0.5em; 
+}
+h1.bb:after { 
+margin-left: 0.5em; 
+}
+@-webkit-keyframes my {
+    0%   {color: #2e2f92;}
+    25%  {color: #38afaa;}
+    50%  {color: #5b59a7;}
+    75%  {color: #f7b21c;}
+    100% {color: #e12527;}
+ }
+@keyframes my {
+    0%   {color: #2e2f92;}
+    25%  {color: #38afaa;}
+    50%  {color: #5b59a7;}
+    75%  {color: #f7b21c;}
+    100% {color: #e12527;}
+ }
+
+</style>
+</head>
+<body>
+  <header>
+    <h1>Deep Thoughts with Master Camper Cat</h1>
+  </header>
+  <section>
+    <form>
+      <p>Sign up to receive Camper Cat's blog posts by email here!</p>
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email">
+    </form>
+  </section>
+  <section class="features">
+      <!-- Add your code below this line -->
+      <fieldset>
+       <legend>What level ninja are you?</legend>
+        <input id="newbie" type="radio" name="levels" value="newbie">
+        <label for="newbie">Newbie Kitten</label><br>
+        <input id="intermediate" type="radio" name="levels" value="intermediate">
+        <label for="intermediate">Developing Student</label><br>
+        <input id="master" type="radio" name="levels" value="master">
+        <label for="master">Master</label>
+        <input type="submit" name="submit" value="Submit">
+      </fieldset>
+      <fieldset>
+       <legend>What level ninja are you?</legend>
+        <input id="newbie" type="radio" name="levels" value="newbie">
+        <label for="newbie">Newbie Kitten</label><br>
+        <input id="intermediate" type="radio" name="levels" value="intermediate">
+        <label for="intermediate">Developing Student</label><br>
+        <input id="master" type="radio" name="levels" value="master">
+        <label for="master">Master</label>
+        <input type="submit" name="submit" value="Submit">
+      </fieldset>
+      <!-- Add your code above this line -->
+
+
+      
+      <a href="http://freecatphotoapp.com/" target="_blank">CatPhotoApp</a>
+    </form>
+  </section>
+  <article class="border">
+    <h2>The Garfield Files: Lasagna as Training Fuel?</h2> 
+    <p></p>
+    <p>The internet is littered with varying opinions on nutritional paradigms, <span> from catnip </span>paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>
+  </article>
+  <img src="samuraiSwords.jpeg" alt="">
+  <article class="border1">
+    <h2>Defeating your Foe: the Red Dot is Ours!</h2>
+    <p>Felines the world over have been waging war on the most persistent <span> of foes</span>.This red nemesis combines both cunning stealth and lightening speed. But chin up, fellow fighters, our time for victory may soon be near...</p>
+  </article>
+  <img src="samuraiSwords.jpeg" alt="">
+  <article class="border2">
+    <h2>Is Chuck Norris a Cat Person?</h2>
+    <p>Chuck Norris is widely regarded as the premier martial artist <span> on the planet</span>, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>
+  </article>
+  <footer>&copy; 2018 Camper Cat</footer>
+  <div class="article">
+            <p>Основний блок</p>
+            <div>
+                <p>Цей параграф прописаний підблоком</p>
+            </div>
+            <p>Колір змінюється в параграфах тільки основного блоку. Для цього використовуємо значок ">" (.article > p {...})  </p>
+  </div>
+  <p class="first">
+    <a href="http://freecatphotoapp.com/" target="_blank">Catalog paragraf #1</a> <br>
+    <a href="http://freecatphotoapp.com/" target="_blank">Catalog paragraf #2</a>
+    <p>
+      <a href="http://freecatphotoapp.com/" target="_blank">Catalog paragraf div #1</a> <br>
+      <a href="http://freecatphotoapp.com/" target="_blank">Catalog paragraf div #2</a>
+      <p>
+        <a href="http://freecatphotoapp.com/" target="_blank">Catalog paragraf div paragraf #1</a> <br>
+        <a href="http://freecatphotoapp.com/" target="_blank">Catalog paragraf div paragraf #2</a>
+      </p>
+    </p>
+  </p>
+  <img src = "samuraiSwords.jpg" alt = "tall-a">
+  <img src = "samuraiSwords.jpg"> 
+  <img src = "samuraiSwords.jpg" alt = "nich">
+  <img src = "samuraiSwords.jpg" alt = "tall-b">
+  <img src = "samuraiSwords.jpg" alt = "c-tall"> 
+  <img src = "samuraiSwords.jpg">
+  <ul>
+            <li>Samsung: <a class="redLink">Galaxy S7 Edge</a></li>
+            <li>Apple: <a>iPhome SE</a></li>
+            <li>LG: <a class="redLink">LG G5</a></li>
+            <li>Microsoft: <a class="redLink">Lumia 650</a></li>
+        </ul>
+
+  <p>Привіт! <sub>It's I am.</sub></p> 
+  <h1 class="bb">Happy New Year!</h1>     
+</body>
+</html>
